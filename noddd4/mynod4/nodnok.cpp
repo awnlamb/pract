@@ -1,5 +1,5 @@
 #include "nodnok.h"
-#include <cmath>
+//#include <cmath>
 nodnok::nodnok() {}
 nodnok::nodnok(int c,int d)
 {
@@ -7,23 +7,34 @@ nodnok::nodnok(int c,int d)
 }
 int nodnok::nod()
 {
-    unsigned int c=abs(a);
-    unsigned int d=abs(b);
-    if (c % d == 0) return d;
-    if (d % c == 0) return c;
-    if (c > d)
+    if (a<0) a*=-1;
+    if (b<0) b*=-1;
+    if (b == 0)
+        return a;
+    else
     {
-        c%=d;
+        int t=a;
+        a=b;
+        b=t%b;
         return this->nod();
+    }
+    /*if (a % b == 0) return b;
+    if (b % a == 0) return a;
+    if (a > b)
+    {
+        a%=b;
+        return abs(this->nod());
     }
     else
     {
-        d%=c;
+        b%=a;
         return abs(this->nod());
-    }
+    }*/
 }
 
 int nodnok::nok()
 {
+    if (a < 0) a *= -1;
+    if (b < 0) b *= -1;
     return (a*b)/(nod());
 }
