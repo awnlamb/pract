@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/copy-svgrepo-com.svg</file>
+        <file>image/open-svgrepo-com.svg</file>
+        <file>image/paste-svgrepo-com (1).svg</file>
+        <file>image/paste-svgrepo-com.svg</file>
+        <file>image/qt-svgrepo-com.svg</file>
+        <file>image/question-1445-svgrepo-com.svg</file>
+        <file>image/quit-svgrepo-com.svg</file>
+        <file>image/save-as-svgrepo-com.svg</file>
+        <file>image/save-svgrepo-com.svg</file>
+    </qresource>
+</RCC>
